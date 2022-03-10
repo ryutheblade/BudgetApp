@@ -1,4 +1,5 @@
 import { Button, Container, Stack } from "react-bootstrap"
+import BudgetCard from "./components/BudgetCard";
 
 
 function App() {
@@ -8,9 +9,15 @@ function App() {
         <h1 className="me-auto">Budgets</h1> 
         <Button variant="primary">Add Budget</Button>
         <Button variant="outline-primary">Add Expense</Button>
-        </Stack>
+      </Stack>
+      <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start",}}
+      >
+        <BudgetCard name="Entertainment" gray amount={800} max={1000}></BudgetCard>
+      </div>
     </Container>
   )
 }
 
 export default App;
+//Reminder: save often and make sure you didn't break anything, don't want to have to start over again
+//Reminder: look up how to make custom hooks!
