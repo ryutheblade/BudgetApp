@@ -36,7 +36,7 @@ function App() {
               <BudgetCard key={budget.id} name={budget.name} amount={amount} max={budget.max} onAddExpenseClick={() => openAddExpenseModal(budget.id)} onViewExpensesClick={() => setViewExpensesModalBudgetId(budget.id)}/>
             )
         })}
-        <UncategorizedBudgetCard onAddExpenseClick={openAddExpenseModal} onViewExpensesClick={setViewExpensesModalBudgetId}/>
+        <UncategorizedBudgetCard onAddExpenseClick={openAddExpenseModal} onViewExpensesClick={() => setViewExpensesModalBudgetId(UNCATEGORIZED_BUDGET_ID)}/>
         <TotalBudgetCard />
         </div>
       </Container>
@@ -50,4 +50,4 @@ function App() {
 export default App;
 //Reminder: save often and make sure you didn't break anything, don't want to have to start over again
 //Reminder: look up how to make custom hooks!
-//TODO: Fix Uncatagorized
+//TODO: Fix Uncatagorized - It's fixed!!!
