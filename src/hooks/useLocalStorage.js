@@ -1,3 +1,4 @@
+//took this from an online tutorial, can't remember which one currently. Should've noted that when I first looked it up, but there are a bunch if you google it.
 import { useEffect, useState } from "react";
 
 export default function useLocalStorage(key, defaultValue) {
